@@ -1,0 +1,34 @@
+{
+  "name": "nodo-test",
+  "version": "1.0.0",
+  "description": "Test Técnico Nodo - Node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no hay tests especificados\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NODOapp/nodo-test.git"
+  },
+  "keywords": [
+    "test",
+    "nodo",
+    "nodejs",
+    "prueba",
+    "desafío",
+    "nodoapp"
+  ],
+  "author": "cplopez4@uc.cl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NODOapp/nodo-test/issues"
+  },
+  "homepage": "https://github.com/NODOapp/nodo-test#readme",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "express-partials": "^0.3.0",
+    "http": "0.0.0",
+    "mongoose": "^4.10.4"
+  }
+}
