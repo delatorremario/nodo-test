@@ -7,7 +7,9 @@ const mongoose = require('mongoose');
 
 // Mongoose
 mongoose.Promise = Promise;
-mongoose.connect('mongodb://localhost/nodo-test');
+mongoose.connect('mongodb://localhost/nodo-test')
+    .then(console.log('connect mongodb'))
+    .catch(err => console.error(err.message));
 
 // Routes
 const api = require('./routes/api');
