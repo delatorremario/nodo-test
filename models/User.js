@@ -17,4 +17,8 @@ var UserSchema = new Schema({
 
 /* TODO: Métodos de clase */
 
+UserSchema.statics.search = function search (email, cb) {
+  return this.where('email', new RegExp(email, 'i')).exec(cb);
+}
+
 module.exports = mongoose.model('User', UserSchema);

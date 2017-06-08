@@ -36,9 +36,10 @@ router.get('/tree_data', function (req, res) {
 
 /* TODO: Retornar el User de id=:id */
 router.get('/users/:id', function (req, res) {
-    var user = {};
-
-    res.json(user);
+    User.search(req.params.id, function (err, user) {
+        if (err) { console.error(err.message); return; }
+        res.json(user && user[0] || {});
+    })
 });
 
 module.exports = router;
