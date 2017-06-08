@@ -1,4 +1,5 @@
 var express = require('express');
+var _ = require('lodash');
 var d3_data = require('../public/json/dummy.json'); //Objeto de ejemplo, debe ser reemplazado por la llamada en la ruta
 
 /* Mongoose Models */
@@ -16,11 +17,11 @@ router.get('/tree_data', function(req, res) {
     res.json(d3_data);
 });
 
-/* TODO: Retornar un arreglo de UserObjects con los cuales tiene asociación el User(:id) */
-router.get('/users/:id/relations', function(req, res) {
-	var relations = [];
+/* TODO: Retornar el User de id=:id */
+router.get('/users/:id', function(req, res) {
+	var user = {};
     
-    res.json(relations);
+    res.json(user);
 });
 
 module.exports = router;

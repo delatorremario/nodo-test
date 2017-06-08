@@ -28,6 +28,7 @@ d3.json('/tree_data', function(error, graph) {
     .data(graph.nodes)
     .enter().append("circle")
       .attr("r", 5)
+      .attr("id", function(d) { return d.id; })
       .attr("fill", function(d) { return color(d.group); })
       .call(d3.drag()
           .on("start", dragstarted)
@@ -73,3 +74,10 @@ function dragended(d) {
   d.fx = null;
   d.fy = null;
 }
+
+
+
+/* D3 Click Event - Handle by jQuery */
+$(document).on("click", "circle", function(){
+  /* TODO: Extraer datos de los nodos por :id para mostrar en la vista */
+});
