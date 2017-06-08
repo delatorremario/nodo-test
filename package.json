@@ -29,6 +29,7 @@
     "express": "^4.15.3",
     "express-partials": "^0.3.0",
     "http": "0.0.0",
+    "jsonrequest": "^4.1.7",
     "lodash": "^4.17.4",
     "mongoose": "^4.10.4"
   }
